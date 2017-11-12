@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pixel Art Maker!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://use.fontawesome.com/8420be0f87.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Russo+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-8">
+        <div class="table-container">
+          <div class="table-top">
+            <h4>
+            Pixel Art Maker
+            </h4>
+            <button class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+          </div>
+          <!-- Table -->
+          <div class="table-wrapper">
+            <div id="table"></div>
+          </div>
+          <!-- knobs -->
+          <div class="knobs">
+            <div class="left-knob">
+              <p class="knob-label">Click</p>
+              <div class="knob click" value="click">
+              </div>
+            </div>
+            <div class="right-knob">
+              <p class="knob-label">Draw</p>
+              <div class="knob draw" value="draw">
+              </div>
+            </div>
+          </div>
+          <!-- Size input -->
+          <div class="size-input">
+            <p>Choose Grid Size</p>
+            <div class="input-group">
+              <input type="number" id="input_size" class="form-control" placeholder="Enter size..." min="1" max="70" value="40">
+              <span class="input-group-btn">
+                  <button id="sizePicker" class="btn btn-secondary" type="button">Go!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <!-- Color picker -->
+        <p class="color-picker-label">Pick A Color</p>
+        <div id="color-picker"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="designs.js"></script>
+</body>
+
+</html>
