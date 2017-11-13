@@ -1,4 +1,4 @@
-let colors = [
+const colors = [
   'rgb(0, 0, 0)',
   'rgb(255, 255, 255)',
   'rgb(229, 231, 233)',
@@ -38,12 +38,12 @@ let colors = [
 ];
 
 // Select the inputs and the table tag
-let table = $('#table');
-let sizeInput = $('#input_size');
-let colorContainer = $('#color-picker');
-let methodClickButton = $('.click');
-let methodDrawButton = $('.draw');
-let refreshButton = $('.refresh');
+const table = $('#table');
+const sizeInput = $('#input_size');
+const colorContainer = $('#color-picker');
+const methodClickButton = $('.click');
+const methodDrawButton = $('.draw');
+const refreshButton = $('.refresh');
 
 //default color
 let color = colors[0];
@@ -75,7 +75,10 @@ refreshButton.click(function() {
 });
 
 // initialize table with default height + width
-init();
+document.addEventListener('DOMContentLoaded', function() {
+  createColorPicker();
+  makeGrid();
+});
 
 function makeGrid() {
   // Get the height and width of table, default size 5
@@ -156,9 +159,4 @@ function refreshTable() {
   $('.square').each(function() {
     $(this).css('background-color', 'rgb(232,232,232)');
   });
-}
-
-function init() {
-  createColorPicker();
-  makeGrid();
 }
